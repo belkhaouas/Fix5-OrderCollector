@@ -1,0 +1,65 @@
+package tta.orderCollector.dto.enumerable;
+
+public enum Response_enum {
+
+	// Order Collector responses dictionary
+	OK(0),	
+	ORDER_REFERENCE_ALREADY_RECEIVED(1),
+	ORDER_OPERATION_TYPE_UNSUPPORTED_VALUE(2), 
+	ORDER_SENSE_UNSUPPORTED_VALUE(3),
+	ORDER_ORIGIN_UNSUPPORTED_VALUE(4),
+	ORDER_PRICE_TYPE_UNSUPPORTED_VALUE(5),
+	ORDER_CONFIRMATION_UNSUPPORTED_VALUE(6),
+	ORDER_QUANTITY_UNSUPPORTED_VALUE(7),
+	ORDER_VQUANTITY_NON_PERMITTED(8),
+	ORDER_MINQUANTITY_NON_PERMITTED(9),
+	ORDER_REFORIGIN_UNSUPPORTED_VALUE(10),
+	ORDER_ISIN_UNSUPPORTED_VALUE(11),
+	ORDER_VALIDITY_UNSUPPORTED_VALUE(12),
+	ORDER_PRICES_NON_PERMITTED(13),
+	ORDER_UNSET(14),
+	ORDER_SENSE_UNSET(15),
+	ORDER_ISIN_UNSET(16),
+	ORDER_ORIGINE_UNSET(17),
+	ORDER_VALIDITY_TYPE_UNSUPPORTED_VALUE(18), 
+	ORDER_SAVING_ERROR ( 19);
+	
+	private final int value;
+
+	Response_enum(int value) {
+		this.value = value;
+	}
+
+	public int value() {
+		return this.value;
+	}
+
+	public static Response_enum get(final int value) {
+
+		switch (value) {
+		case (0):return OK;
+		case (1):return ORDER_REFERENCE_ALREADY_RECEIVED;
+		case (2):return ORDER_OPERATION_TYPE_UNSUPPORTED_VALUE;
+		case (3):return ORDER_SENSE_UNSUPPORTED_VALUE;
+		case (4):return ORDER_ORIGIN_UNSUPPORTED_VALUE;
+		case (5):return ORDER_PRICE_TYPE_UNSUPPORTED_VALUE;
+		case (6):return ORDER_CONFIRMATION_UNSUPPORTED_VALUE;
+		case (7):return ORDER_QUANTITY_UNSUPPORTED_VALUE;
+		case (8):return ORDER_VQUANTITY_NON_PERMITTED;
+		case (9):return ORDER_MINQUANTITY_NON_PERMITTED;
+		case (10):return ORDER_REFORIGIN_UNSUPPORTED_VALUE;
+		case (11):return ORDER_ISIN_UNSUPPORTED_VALUE;
+		case (12):return ORDER_VALIDITY_UNSUPPORTED_VALUE;
+		case (13):return ORDER_PRICES_NON_PERMITTED;
+		case (14):return ORDER_UNSET;
+		case (15):return ORDER_SENSE_UNSET;
+		case (16):return ORDER_ISIN_UNSET;
+		case (17):return ORDER_ORIGINE_UNSET;
+		case (18):return ORDER_VALIDITY_TYPE_UNSUPPORTED_VALUE;
+		case (19):return ORDER_SAVING_ERROR;
+
+		}
+
+		throw new IllegalArgumentException("Unknown value: " + value);
+	}
+}
